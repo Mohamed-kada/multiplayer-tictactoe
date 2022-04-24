@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="center-container">
+        <div id="tic-tac-toe-grid" class="box">
+            <div id="x0y0" onclick="turn(0,0)" class="case"></div>
+            <div id="x1y0" onclick="turn(1,0)" class="case"></div>
+            <div id="x2y0" onclick="turn(2,0)" class="case"></div>
+            <div id="x0y1" onclick="turn(0,1)" class="case"></div>
+            <div id="x1y1" onclick="turn(1,1)" class="case"></div>
+            <div id="x2y1" onclick="turn(2,1)" class="case"></div>
+            <div id="x0y2" onclick="turn(0,2)" class="case"></div>
+            <div id="x1y2" onclick="turn(1,2)" class="case"></div>
+            <div id="x2y2" onclick="turn(2,2)" class="case"></div>
+        </div>
+    </div>
+    <div class="text-container">
+        <p id="current-turn" class="hide"><b><span id="clientId"></span></b></p>
+    </div>
+    <div class="winner-container">
+            <span><b><span id="winnerId"></span></b></span>
+        </div>
+        <button id="replay" onclick="restart()">REPLAY</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.min.js"></script>
+    <script src="socket.js"></script>
+</body>
+</html>
